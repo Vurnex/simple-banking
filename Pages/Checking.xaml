@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.Pages.Checking">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame BackgroundColor="White"
+                   CornerRadius="10">
+                <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         WidthRequest="375">
+                    <Label Text="CHECKING"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="myListView" 
+                      SeparatorColor="Gray"
+                      RowHeight="75"
+                      SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="100">
+                                <Label Text="{Binding TransactionName}"
+                                       TextColor="Black"
+                                       FontSize="20"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="Center"></Label>
+                                <Label Text="{Binding TransactionAmount}"
+                                       TextColor="Black"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

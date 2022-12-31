@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.Pages.LoginPage"
+             Title="Simple Banking"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Orientation="Vertical" 
+                         Padding="30" 
+                         Spacing="40"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <BoxView HeightRequest="10"/>
+                <Image Source="logo.png" />
+                <Label Text="SIGN IN"
+                       HorizontalOptions="Center"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="Black">
+                </Label>
+                <Frame BackgroundColor="#BF043055" HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
+                               PlaceholderColor="LightGray" HeightRequest="40"   
+                               Keyboard="Email"  
+                               TextColor="White"/>
+                        <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                               PlaceholderColor="LightGray" HeightRequest="40"  
+                               IsPassword="True"  
+                               TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
+                        FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                        BackgroundColor="#088da5" />
+            </StackLayout>
+            <StackLayout
+                x:Name="aiLayout"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="Gray" Opacity="0.5">
+                <ActivityIndicator
+                    x:Name="ai"
+                    IsRunning="False"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Color="DeepSkyBlue"/>
+            </StackLayout>
+        </AbsoluteLayout>
+
+        <!--ActivityIndicator IsRunning="True"
+                               Color="Blue"
+                               AbsoluteLayout.LayoutBounds=".5,.5,100,100"
+                               AbsoluteLayout.LayoutFlags="PositionProportional">
+        </ActivityIndicator-->
+    </ContentPage.Content>
+</ContentPage>

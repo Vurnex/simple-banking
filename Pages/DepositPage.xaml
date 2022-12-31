@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.DepositPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame CornerRadius="10">
+                <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         WidthRequest="375">
+                    <Label Text="Deposit A Check"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+
+                    <Label Text="Deposit To:"
+                           FontSize="15"
+                           TextColor="Black"
+                           BackgroundColor="White"
+                           Margin="0,20,0,0">
+                    </Label>
+                    
+                    <Picker Title="Select an option" x:Name="pickerAccountType"
+                            SelectedIndexChanged="pickerAccountType_SelectedIndexChanged"/>
+
+                    <Label Text="Amount to Deposit"
+                           FontSize="15"
+                           TextColor="Black"
+                           BackgroundColor="White"
+                           Margin="0,20,0,0">
+                    </Label>
+
+                    <Entry Placeholder="Amount"   
+                               PlaceholderColor="DimGray" HeightRequest="40"   
+                               TextColor="Black"
+                               Keyboard="Numeric"
+                               x:Name="entryDepositAmount"/>
+
+                    <Button Text="Deposit" 
+                            TextColor="White"  
+                            FontAttributes="Bold" 
+                            FontSize="Large" 
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#088da5"
+                            Margin="0,30,0,0"
+                            x:Name="depositButton"
+                            Clicked="depositButton_Clicked"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

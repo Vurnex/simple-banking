@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.TransferPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame CornerRadius="10">
+                <StackLayout 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="375">
+                    <Label Text="Transfer Between My Accounts"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+                    <ImageButton Source="transfer.png"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Transparent"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        Margin="0, 30, 0, 0"
+                        x:Name="transferButton"
+                        Clicked="transferButton_Clicked"/>
+                    <Label Text="Make A Transfer"
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       BackgroundColor="White">
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="10">
+
+                <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="375">
+
+                    <Label Text="Send or Request Money With Cash App"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+
+                    <FlexLayout 
+                        Direction="Row"
+                        AlignItems="Center"
+                        JustifyContent="SpaceEvenly">
+
+                        <StackLayout>
+                            <ImageButton Source="send.png"
+                            BackgroundColor="Transparent"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Margin="0, 30, 0, 0"
+                            x:Name="sendMoneyButton"/>
+
+                            <Label Text="Send" 
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   TextColor="Black"></Label>
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <ImageButton Source="request.png"
+                            BackgroundColor="Transparent"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Margin="0, 30, 0, 0"
+                            x:Name="requestMoneyButton"/>
+
+                            <Label Text="Request" 
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   TextColor="Black"></Label>
+                        </StackLayout>
+                        
+                    </FlexLayout>
+
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

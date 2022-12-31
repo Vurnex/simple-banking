@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.Pages.MakeTransfer">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame CornerRadius="10">
+                <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         WidthRequest="375">
+                    <Label Text="Transfer"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+
+                    <Label Text="From:"
+                           FontSize="15"
+                           TextColor="Black"
+                           BackgroundColor="White"
+                           Margin="0,20,0,0">
+                    </Label>
+
+                    <Picker Title="Select an account..." x:Name="pickerAccountOne"
+                            SelectedIndexChanged="pickerAccountOne_SelectedIndexChanged"/>
+
+
+                    <Label Text="To:"
+                           FontSize="15"
+                           TextColor="Black"
+                           BackgroundColor="White"
+                           Margin="0,20,0,0">
+                    </Label>
+
+                    <Picker Title="Select an account..." x:Name="pickerAccountTwo"
+                            SelectedIndexChanged="pickerAccountTwo_SelectedIndexChanged"/>
+
+                    <Entry Placeholder="Amount"   
+                               PlaceholderColor="DimGray" HeightRequest="40"   
+                               TextColor="Black"
+                               Keyboard="Numeric"
+                               x:Name="entryTransferAmount"/>
+
+                    <Button Text="Transfer Now" 
+                            TextColor="White"  
+                            FontAttributes="Bold" 
+                            FontSize="Large" 
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#088da5"
+                            Margin="0,30,0,0"
+                            x:Name="transferNowButton"
+                            Clicked="transferNowButton_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

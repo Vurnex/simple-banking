@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App440Project.BillsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame CornerRadius="10">
+                <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         WidthRequest="375">
+                    <Label Text="My Bills"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       BackgroundColor="White">
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Label  Text="There are currently no bills due."
+                    FontSize="20"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    BackgroundColor="White"
+                    Margin="0,20,0,0"
+                    x:Name="noBills">
+            </Label>
+            <ListView x:Name="myListView" 
+                      SeparatorColor="Gray"
+                      RowHeight="75"
+                      SelectionMode="None"
+                      ItemTapped="myListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding BillTitle}"
+                                  Detail="{Binding BillAmount}"
+                                  TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
