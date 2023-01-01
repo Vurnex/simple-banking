@@ -21,3 +21,5 @@ Most of the frontend is developed in XAML while the backend is developed in C#. 
 - App development using Xamarin Forms
 - Using View Models to update views in the app
 - Data Binding
+
+*Most of the project files have been omitted to reduce the size and time to upload. Only the code demonstrating the implementation is left.
