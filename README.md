@@ -22,6 +22,11 @@ Most of the frontend is developed in XAML while the backend is developed in C#. 
 - Using View Models to update views in the app
 - Data Binding
 
+## What I Would Like To Improve In This Project
+
+- Refactor some parts of the functions. I notice there is repetitive code in some functions that can be its own function.
+- Add further authentication to the app. The login credentials are currently hardcoded in.
+
 *Most of the project files have been omitted to reduce the size and time to upload. Only the code demonstrating the implementation is left.
 
 ## Pictures
@@ -34,9 +39,13 @@ Main Page
 
 ![image](https://user-images.githubusercontent.com/107071736/210183181-345c02c2-6e44-4160-b9a6-fd4424311709.png)
 
+Account Transaction Details
+
+![image](https://user-images.githubusercontent.com/107071736/235369077-5cb2d8cd-8f9c-493a-bdd9-5a795fd7a50e.png)
+
 Transfer
 
-![image](https://user-images.githubusercontent.com/107071736/210183194-9dd99aec-5dda-4ae5-a330-c4dea4682a21.png)
+![image](https://user-images.githubusercontent.com/107071736/235369105-474b396d-e12b-443b-a28c-78865bfe587e.png)
 
 Bills
 
